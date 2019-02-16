@@ -1,7 +1,22 @@
 import random
-print("Let\'s play a guessing game!")
+def start():
+  print("Let\'s play a guessing game!")
+  print("How big do you want guessing pool to be? Choose the number between 20 and 1000:")
+  gpool = input()
+  gpool = int(gpool)
 
-def play(n=20, tries=5):
+  if gpool < 20:
+    print("Sorry, smallest guessing pool is 20. I set the number to 20 for you.")
+    gpool = 20
+
+  if gpool > 1000:
+    print("Sorry, biggest guessing pool is 1000. I set the number to 1000 for you")
+    gpool = 1000
+  
+  play(gpool, (gpool//4))
+    
+
+def play(n, tries):
 
   winning_option = random.randint(1,n)
   #print(winning_option)
@@ -19,12 +34,15 @@ def play(n=20, tries=5):
             print("Do you want to try again? Y/N") 
             playagain = input()
             playagain = str(playagain)
+            playagain = playagain.upper()
             while playagain != "Y" and playagain != "N":
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
               playagain = str(playagain)
+              playagain = playagain.upper()
             if playagain == "Y":
-              play(n, tries)
+              start()
+              
             else:
               return
         else:
@@ -37,13 +55,15 @@ def play(n=20, tries=5):
             print("Do you want to try again? Y/N") 
             playagain = input()
             playagain = str(playagain)
+            playagain = playagain.upper()
             while playagain != str("Y") and playagain != str("N"):
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
               playagain = str(playagain)
+              playagain = playagain.upper()
             if playagain == "Y":
+              start()
               
-              play(n, tries)
             else:
               return
           
@@ -56,18 +76,23 @@ def play(n=20, tries=5):
         print("Do you want to try again? Y/N")
         playagain = input()
         playagain = str(playagain)
+        playagain = playagain.upper()
         while playagain != "Y" and playagain != "N":
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
               playagain = str(playagain)
+              playagain = playagain.upper()
         if playagain == "Y":
+          start()
           
-          play(n, tries)
         else:
           break
         
+start()
 
-play()
             
+
+
+
 
 
