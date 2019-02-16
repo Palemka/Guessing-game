@@ -33,12 +33,10 @@ def play(n, tries):
             print("You've guessed incorrectly! You are out of moves. Better luck next time!")
             print("Do you want to try again? Y/N") 
             playagain = input()
-            playagain = str(playagain)
             playagain = playagain.upper()
             while playagain != "Y" and playagain != "N":
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
-              playagain = str(playagain)
               playagain = playagain.upper()
             if playagain == "Y":
               start()
@@ -54,12 +52,10 @@ def play(n, tries):
             print("You've guessed incorrectly! You are out of moves. Better luck next time!")
             print("Do you want to try again? Y/N") 
             playagain = input()
-            playagain = str(playagain)
             playagain = playagain.upper()
             while playagain != str("Y") and playagain != str("N"):
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
-              playagain = str(playagain)
               playagain = playagain.upper()
             if playagain == "Y":
               start()
@@ -75,12 +71,10 @@ def play(n, tries):
         print("Congratulations! You've guessed my number in {0} moves!".format(count))
         print("Do you want to try again? Y/N")
         playagain = input()
-        playagain = str(playagain)
         playagain = playagain.upper()
         while playagain != "Y" and playagain != "N":
               print("Incorrect letter. Please type Y if you want to play again, or N if you don't")
               playagain = input()
-              playagain = str(playagain)
               playagain = playagain.upper()
         if playagain == "Y":
           start()
