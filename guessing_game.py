@@ -13,7 +13,7 @@ def start():
     print("Sorry, biggest guessing pool is 1000. I set the number to 1000 for you")
     gpool = 1000
   
-  play(gpool, (gpool//4))
+  play(gpool, 5)
     
 
 def play(n, tries):
